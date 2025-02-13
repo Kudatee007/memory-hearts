@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Match the Hearts - Valentine's Game</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <main class="container">
-    <h1>Match the Hearts 💖</h1>
-    <p>Find all the matching pairs of love-themed messages!</p>
-    <div id="game-board" class="game-board">
-      <!-- Cards will be generated here using JavaScript -->
-    </div>
-    <button id="reset-button">Reset Game</button>
-  </main>
-  <script src="script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Match the Hearts - Valentine's Game</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section id="cover" class="cover hidden">
+      <span>🥳🥳 <br> Yay! You've matched all the hearts! <br> Happy Valentine!❤️</span>
+      <button class="reset-button" onclick="playAgain()">Play Again</button>
+    </section>
+    <main class="container">
+      <h1>Match the Hearts 💖</h1>
+      <p>Find all the matching pairs of love-themed messages!</p>
+      <div id="game-board" class="game-board">
+        <!-- Cards will be generated here using JavaScript -->
+      </div>
+      <button class="reset-button" onclick="resetGame()">Reset Game</button>
+    </main>
+    <script src="script.js"></script>
+  </body>
 </html>
