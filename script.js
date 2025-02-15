@@ -14,6 +14,8 @@ const cards = [
 ];
 let flippedCards = [];
 let matchedCards = [];
+const sound = document.getElementById("myAudio");
+const soundWin = document.getElementById("myAudioWin");
 
 function shuffle(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -62,6 +64,7 @@ function flipCard(event) {
       checkMatch();
     }
   }
+  sound.play()
 }
 
 // logic to check if the cards match
@@ -86,6 +89,7 @@ function checkMatch() {
     if (matchedCards.length === cards.length) {
       setTimeout(() => {
         coverBoard.classList.remove("hidden");
+        soundWin.play()
       }, 700);
     }
   } else {
@@ -119,6 +123,7 @@ function resetGame() {
 function playAgain() {
   const coverBoard = document.getElementById("cover");
   coverBoard.classList.add("hidden");
+  soundWin.pause()
   resetGame();
 }
 
